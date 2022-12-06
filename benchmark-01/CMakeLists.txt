@@ -1,4 +1,4 @@
-cet_build_plugin(LastIndex art::module NO_INSTALL)
-cet_build_plugin(PlusOne art::module NO_INSTALL)
-cet_build_plugin(Plus101 art::module NO_INSTALL)
-cet_build_plugin(VerifyDifference art::module NO_INSTALL)
+cet_test(benchmark-01 HANDBUILT
+         TEST_EXEC art
+         TEST_ARGS -c benchmark-01.fcl
+         DATAFILES benchmark-01.fcl)

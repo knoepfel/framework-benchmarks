@@ -1,0 +1,8 @@
+services.scheduler.wantSummary: true
+
+physics: {
+  analyzers: {
+    readEventNumber: { module_type: ReadEventNumber }
+  }
+  ep: [readEventNumber]
+}

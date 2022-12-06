@@ -1,16 +1,8 @@
+services.scheduler.wantSummary: true
+
 physics: {
   producers: {
     lastIndex: { module_type: LastIndex }
-    plusOne: { module_type: PlusOne inputLabel: "lastIndex:a" }
-    plus101: { module_type: Plus101 inputLabel: "lastIndex:a" }
   }
-  analyzers: {
-    verifyDifference: {
-      module_type: VerifyDifference
-      inputLabelA: "plusOne:b"
-      inputLabelB: "plus101:c"
-    }
-  }
-  tp: [lastIndex, plusOne, plus101]
-  ep: [verifyDifference]
+  tp: [lastIndex]
 }

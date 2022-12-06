@@ -1,0 +1,10 @@
+services.scheduler.wantSummary: true
+
+physics: {
+  producers: {
+    lastIndex1: { module_type: LastIndex }
+    lastIndex2: { module_type: LastIndex }
+  }
+  tp1: [lastIndex1]
+  tp2: [lastIndex2]
+}

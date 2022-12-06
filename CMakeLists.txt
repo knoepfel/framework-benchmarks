@@ -9,19 +9,13 @@ cet_cmake_env()
 cet_set_compiler_flags(DIAGS VIGILANT WERROR NO_UNDEFINED EXTRA_FLAGS -pedantic)
 cet_report_compiler_flags(REPORT_THRESHOLD VERBOSE)
 
-find_package(CLHEP COMPONENTS Random REQUIRED)
-find_package(Threads REQUIRED)
-find_package(art REQUIRED EXPORT)
-find_package(canvas REQUIRED EXPORT)
-find_package(cetlib REQUIRED)
-find_package(fhiclcpp REQUIRED)
-find_package(messagefacility REQUIRED)
-
-include(ArtMake)
-include(BuildPlugins)
-
 cet_enable_asserts()
+add_subdirectory(plugins)
+
 # Make sure tests have correct environment settings.
 include(CetTest)
 
 add_subdirectory(benchmark-01)
+add_subdirectory(benchmark-02)
+add_subdirectory(benchmark-03)
+add_subdirectory(benchmark-06)

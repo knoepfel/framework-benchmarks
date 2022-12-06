@@ -1,0 +1,16 @@
+find_package(CLHEP COMPONENTS Random REQUIRED)
+find_package(Threads REQUIRED)
+find_package(art REQUIRED EXPORT)
+find_package(canvas REQUIRED EXPORT)
+find_package(cetlib REQUIRED)
+find_package(fhiclcpp REQUIRED)
+find_package(messagefacility REQUIRED)
+
+# include(ArtMake)
+include(BuildPlugins)
+
+cet_build_plugin(LastIndex art::module NO_INSTALL)
+cet_build_plugin(PlusOne art::module NO_INSTALL)
+cet_build_plugin(Plus101 art::module NO_INSTALL)
+cet_build_plugin(ReadEventNumber art::module NO_INSTALL)
+cet_build_plugin(VerifyDifference art::module NO_INSTALL)
